@@ -13,8 +13,8 @@
 
 <style>
 #app {
-  text-align: center;
   color: var(--ep-text-color-primary);
+  text-align: center;
 }
 
 .element-plus-logo {
