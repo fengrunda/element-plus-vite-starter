@@ -38,13 +38,15 @@ module.exports = {
       'warn',
       {
         singleline: {
-          max: 5
+          max: 10
         },
         multiline: {
           max: 1
         }
       }
     ],
+    // add your custom rules here
+    'vue/multi-word-component-names': 'off',
     'vue/singleline-html-element-content-newline': 'off', // 要求单行元素的内容前后有一个换行符
     'vue/attributes-order': [
       'error',

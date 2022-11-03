@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 
-defineProps<{ msg: string }>();
+defineProps<{ msg: string }>()
 
-const count = ref(0);
-const input = ref("element-plus");
+const count = ref(0)
+const input = ref('element-plus')
 
 const curDate = ref('')
 
@@ -17,10 +17,9 @@ const toast = () => {
 <template>
   <h1>{{ msg }}</h1>
 
-  <p>
+  <p class="mt-5">
     See
-    <a href="https://element-plus.org" target="_blank">element-plus</a> for
-    more information.
+    <a href="https://element-plus.org" target="_blank">element-plus</a> for more information.
   </p>
 
   <!-- example components -->
@@ -35,7 +34,7 @@ const toast = () => {
   <el-tag>Tag 1</el-tag>
 
   <br />
-  <el-date-picker v-model="curDate" type="date" placeholder="Pick a day"></el-date-picker>
+  <el-date-picker v-model="curDate" placeholder="Pick a day" type="date"></el-date-picker>
 
   <p>For example, we can custom primary color to 'green'.</p>
 
@@ -50,15 +49,9 @@ const toast = () => {
 
   <p>
     Full Example:
-    <a
-      href="https://github.com/element-plus/element-plus-vite-starter"
-      target="_blank"
-    >element-plus-vite-starter</a>
+    <a href="https://github.com/element-plus/element-plus-vite-starter" target="_blank">element-plus-vite-starter</a>
     | On demand Example:
-    <a
-      href="https://github.com/element-plus/unplugin-element-plus"
-      target="_blank"
-    >unplugin-element-plus/examples/vite</a>
+    <a href="https://github.com/element-plus/unplugin-element-plus" target="_blank">unplugin-element-plus/examples/vite</a>
   </p>
 </template>
 

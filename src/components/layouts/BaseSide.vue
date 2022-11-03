@@ -34,10 +34,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { Location, Document, Menu as IconMenu, Setting } from '@element-plus/icons-vue'
+import { BROWSER_VERSION } from '@/utils/util'
 
 const isCollapse = ref(true)
+// const isCollapse = computed(() => BROWSER_VERSION.mobile)
+addEventListener('resize', (e) => {
+  // console.log('window.screen.availWidth :>> ', window.screen.availWidth)
+  // console.log('window.screen.width :>> ', window.screen.width)
+  // console.log('document.body.clientWidth  :>> ', document.body.clientWidth)
+  isCollapse.value = document.body.clientWidth < 800
+})
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }

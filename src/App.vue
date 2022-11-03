@@ -1,23 +1,13 @@
 <template>
-  <el-config-provider namespace="ep">
-    <BaseHeader />
-    <div style="display: flex">
-      <BaseSide />
-      <div>
-        <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-        <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
-      </div>
-    </div>
-  </el-config-provider>
+  <ElConfigProvider namespace="ep">
+    <RouterView />
+  </ElConfigProvider>
 </template>
 
-<style>
-#app {
-  color: var(--ep-text-color-primary);
-  text-align: center;
-}
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+// import HelloWorld from './components/HelloWorld.vue'
+</script>
 
-.element-plus-logo {
-  width: 50%;
-}
-</style>
+<style lang="scss" scoped></style>

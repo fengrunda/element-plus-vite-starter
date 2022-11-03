@@ -38,6 +38,7 @@ module.exports = {
     'color-function-notation': 'legacy',
     'alpha-value-notation': 'number',
     'string-quotes': 'single',
-    'declaration-block-trailing-semicolon': null
+    'declaration-block-trailing-semicolon': null,
+    'no-empty-source': null
   }
 }
