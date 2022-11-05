@@ -118,7 +118,7 @@ const beforeRetryRegExpMap: {
 }
 
 function request<T = any, D = any>(
-  { retried = false, checkAuth = true, showToast = true, showLoading = true, data, params, ...rest } = {} as RequestConfig<D>
+  { retried = false, checkAuth = true, showToast = true, showLoading = false, data, params, ...rest } = {} as RequestConfig<D>
 ) {
   // http://www.axios-js.com/zh-cn/docs/#axios-request-config
   return axiosInstance.request<T, AxiosResponse<T, D>, D>({

@@ -38,7 +38,7 @@ import { ref, computed } from 'vue'
 import { Location, Document, Menu as IconMenu, Setting } from '@element-plus/icons-vue'
 import { BROWSER_VERSION } from '@/utils/util'
 
-const isCollapse = ref(true)
+const isCollapse = ref(document.body.clientWidth < 800)
 // const isCollapse = computed(() => BROWSER_VERSION.mobile)
 addEventListener('resize', (e) => {
   // console.log('window.screen.availWidth :>> ', window.screen.availWidth)

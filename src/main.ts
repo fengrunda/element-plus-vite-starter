@@ -1,3 +1,4 @@
+// import devtools from '@vue/devtools'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from '@/router'
@@ -5,9 +6,9 @@ import store, { key } from '@/store'
 import { getUrlParams, ToastInterface, LoadingInterface, sleep } from '@/utils/util'
 // import "@/styles/element/index.scss";
 
-// import ElementPlus from "element-plus";
+// import ElementPlus from 'element-plus'
 // import all element css, uncommented next line
-// import "element-plus/dist/index.css";
+// import 'element-plus/dist/index.css'
 
 // or use cdn, uncomment cdn link in `index.html`
 
@@ -36,5 +37,5 @@ router.afterEach((to, from, next) => {
 })
 
 const app = createApp(App)
-// app.use(ElementPlus);
+// app.use(ElementPlus)
 app.use(store, key).use(router).mount('#app')

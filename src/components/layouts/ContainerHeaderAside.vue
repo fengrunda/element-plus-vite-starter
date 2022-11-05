@@ -18,6 +18,9 @@
   </el-container>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// import BaseHeader from './BaseHeader.vue'
+// import BaseSide from './BaseSide.vue'
+</script>
 
 <style lang="scss" scoped></style>

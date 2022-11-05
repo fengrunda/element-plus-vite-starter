@@ -1,9 +1,12 @@
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// import AutoImport from 'unplugin-auto-import/vite'
+import ElementPlus from 'unplugin-element-plus/vite'
 
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
@@ -30,6 +33,15 @@ export default ({ mode }) => {
     },
     plugins: [
       vue(),
+      // AutoImport({
+      //   resolvers: [ElementPlusResolver()]
+      // }),
+      // Components({
+      //   resolvers: [ElementPlusResolver()]
+      // }),
+      ElementPlus({
+        useSource: true
+      }),
       Components({
         // allow auto load markdown components under `./src/components/`
         extensions: ['vue', 'md'],
@@ -58,7 +70,21 @@ export default ({ mode }) => {
         // rules: [
         //   ['m-1', { margin: '0.25rem' }],
         // ]
-      })
+      }),
+      mode === 'development'
+        ? createHtmlPlugin({
+            inject: {
+              data: {
+                injectScript: `
+              <script>
+                window.__VUE_DEVTOOLS_PORT__ = 8081
+              </script>
+              <script src="http://localhost:8081"></script>
+              `
+              }
+            }
+          })
+        : null
     ],
     server: {
       // https: true,
@@ -78,7 +104,7 @@ export default ({ mode }) => {
       },
       hmr: {
         // protocol: 'ws',
-        host: VITE_ENV.VITE_HMR_HOST
+        // host: VITE_ENV.VITE_HMR_HOST
         // path: '/ddh5/'
       }
     }

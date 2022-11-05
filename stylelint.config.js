@@ -21,7 +21,7 @@ module.exports = {
     'max-line-length': 180,
     // 'unit-allowed-list': ['px', 'rpx', '%', 's', 'deg'],
     // 'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['/deep/'] }],
-    // 'selector-pseudo-element-no-unknown': null,
+    'selector-pseudo-element-no-unknown': null,
     // 'no-invalid-position-at-import-rule': null,
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,

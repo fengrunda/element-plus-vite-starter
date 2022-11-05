@@ -14,7 +14,7 @@ const originRoutes: RouteRecordRaw[] = [
     path: '/',
     name: 'MainView',
     component: () => import(/* webpackChunkName: "base" */ '@/components/layouts/ContainerHeaderAside.vue'),
-    redirect: { name: 'Home' },
+    redirect: { name: 'Cy3000' },
     children: [
       {
         path: 'home',
@@ -23,6 +23,14 @@ const originRoutes: RouteRecordRaw[] = [
           title: '首页'
         },
         component: () => import(/* webpackChunkName: "base" */ '@/views/Home.vue')
+      },
+      {
+        path: 'cy3000',
+        name: 'Cy3000',
+        meta: {
+          title: 'Cy3000'
+        },
+        component: () => import(/* webpackChunkName: "cy3000" */ '@/views/cy3000/index.vue')
       }
     ]
   },

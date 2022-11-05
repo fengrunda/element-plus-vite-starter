@@ -111,8 +111,7 @@ export function paginatedListRepositories<T = any, D = any>(PAYLOAD: PaginatedLi
   }
 }
 interface NormalListInput<T, D> {
-  size?: number
-  apiFunction: (params?: RequestParams<D>) => Promise<AxiosResponse<ResponseData<Array<T>>>>
+  apiFunction: (params?: RequestParams<D>) => Promise<AxiosResponse<Array<T>>>
   apiParams?: any
 }
 /**
@@ -142,7 +141,7 @@ export function normalListRepositoriess<T = any, D = any>(PAYLOAD: NormalListInp
           showToast: false
         }
       })
-      state.list = reactive(res.data.data)
+      state.list = reactive(res.data)
     } catch (error) {
       state.errorVisible = true
       state.errorHint = errorFormatter(error, PAYLOAD.apiFunction.name)
@@ -165,7 +164,7 @@ export function normalListRepositoriess<T = any, D = any>(PAYLOAD: NormalListInp
     () => PAYLOAD?.apiParams?.value,
     (newValue, oldValue) => {
       /* ... */
-      // console.log('watch2 apiParams :>> ', newValue, oldValue)
+      console.log('watch2 apiParams :>> ', newValue, oldValue)
       if (newValue) {
         init()
         getList()
