@@ -11,7 +11,6 @@
     "devtools": "PORT=8081 vue-devtools"
   },
   "dependencies": {
-    "@vue/devtools": "^6.4.5",
     "axios": "^1.1.3",
     "dayjs": "^1.11.6",
     "element-plus": "^2.2.13",
@@ -29,7 +28,6 @@
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "@vitejs/plugin-vue": "^2.3.3",
-    "@vitejs/plugin-vue-jsx": "^2.1.0",
     "@vue/eslint-config-standard": "^8.0.1",
     "@vue/eslint-config-typescript": "^11.0.2",
     "eslint": "^8.26.0",
@@ -54,7 +52,6 @@
     "stylelint-order": "^5.0.0",
     "typescript": "^4.7.2",
     "unocss": "^0.34.1",
-    "unplugin-auto-import": "^0.11.4",
     "unplugin-element-plus": "^0.4.1",
     "unplugin-vue-components": "^0.19.5",
     "vite": "^2.9.9",
