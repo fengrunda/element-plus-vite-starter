@@ -71,20 +71,21 @@ export default ({ mode }) => {
         //   ['m-1', { margin: '0.25rem' }],
         // ]
       }),
-      mode === 'development'
-        ? createHtmlPlugin({
-            inject: {
-              data: {
-                injectScript: `
+      createHtmlPlugin({
+        inject: {
+          data: {
+            injectScript:
+              mode === 'development'
+                ? `
               <script>
                 window.__VUE_DEVTOOLS_PORT__ = 8081
               </script>
               <script src="http://localhost:8081"></script>
               `
-              }
-            }
-          })
-        : null
+                : ''
+          }
+        }
+      })
     ],
     server: {
       // https: true,
