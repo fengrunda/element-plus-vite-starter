@@ -103,12 +103,12 @@ export default ({ mode }) => {
           rewrite: (path) => path.replace(VITE_ENV.VITE_PROXY_PATH, '/')
         }
       },
-      // hmr: {
-      //   // protocol: 'ws',
-      //   // host: VITE_ENV.VITE_HMR_HOST
-      //   // path: '/ddh5/'
-      // }
-      hmr: false
+      hmr: {
+        // protocol: 'ws',
+        // host: VITE_ENV.VITE_HMR_HOST
+        // path: '/ddh5/'
+      }
+      // hmr: false
     }
   })
 }
